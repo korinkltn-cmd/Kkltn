@@ -1,0 +1,1057 @@
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --cream: #f4f0e8;
+
+    --cream-dark: #ece7dd;
+
+    --black: #181818;
+
+    --gray: #8b929b;
+
+    --light-gray: #c9c9c5;
+
+    --border: #ddd8cf;
+
+    --red: #df002b;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: var(--cream);
+
+    color: var(--black);
+
+    font-family: "Inter", sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+button,
+input,
+textarea {
+
+    font-family: inherit;
+
+}
+
+
+.container {
+
+    width: min(1020px, calc(100% - 50px));
+
+    margin: 0 auto;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    width: 100%;
+
+    height: 70px;
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.header-inner {
+
+    width: min(750px, calc(100% - 50px));
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.7px;
+
+}
+
+
+.logo span {
+
+    color: var(--red);
+
+    font-size: 18px;
+
+    margin-left: 2px;
+
+}
+
+
+.navigation {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+}
+
+
+.navigation a {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 15px;
+
+    letter-spacing: 1.7px;
+
+    color: #89919c;
+
+    transition: .25s ease;
+
+}
+
+
+.navigation a:hover {
+
+    color: var(--red);
+
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.brief-intro {
+
+    padding-top: 45px;
+
+}
+
+
+.brief-intro .container {
+
+    width: min(750px, calc(100% - 50px));
+
+}
+
+
+.eyebrow {
+
+    color: var(--red);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.brief-intro h1 {
+
+    font-size: 46px;
+
+    line-height: .91;
+
+    letter-spacing: -2.5px;
+
+    font-weight: 800;
+
+}
+
+
+.brief-intro h1 span {
+
+    color: var(--red);
+
+}
+
+
+.intro-text {
+
+    max-width: 600px;
+
+    color: #87909b;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-top: 22px;
+
+}
+
+
+.intro-line {
+
+    height: 1px;
+
+    width: 100%;
+
+    background: #e6a8b2;
+
+    margin-top: 25px;
+
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.brief-form-section {
+
+    padding: 40px 0 85px;
+
+}
+
+
+.brief-form {
+
+    width: 100%;
+
+}
+
+
+.form-section {
+
+    margin-bottom: 38px;
+
+}
+
+
+.form-section-title {
+
+    color: var(--red);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 13px;
+
+    letter-spacing: 1.8px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 35px;
+
+    row-gap: 28px;
+
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.field {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.field label,
+.large-field label,
+.small-title {
+
+    color: #4c5157;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 1.6px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.field input {
+
+    height: 30px;
+
+    border: none;
+
+    border-bottom: 1px solid var(--border);
+
+    background: transparent;
+
+    outline: none;
+
+    color: var(--black);
+
+    font-size: 15px;
+
+    transition: border-color .25s ease;
+
+}
+
+
+.field input::placeholder {
+
+    color: #c4c7c9;
+
+}
+
+
+.field input:focus {
+
+    border-bottom-color: var(--red);
+
+}
+
+
+/* =====================================================
+   SERVICE OPTIONS
+===================================================== */
+
+.field-instruction {
+
+    color: #a2a7ad;
+
+    font-size: 12px;
+
+    margin-top: -3px;
+
+    margin-bottom: 14px;
+
+}
+
+
+.options-grid {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+}
+
+
+.option {
+
+    position: relative;
+
+    cursor: pointer;
+
+}
+
+
+.option input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+.option span {
+
+    display: block;
+
+    border: 1px solid var(--border);
+
+    padding: 8px 12px;
+
+    color: #8b9299;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 15px;
+
+    letter-spacing: .7px;
+
+    transition: all .2s ease;
+
+}
+
+
+.option:hover span {
+
+    border-color: #aaa;
+
+}
+
+
+.option input:checked + span {
+
+    color: white;
+
+    background: var(--black);
+
+    border-color: var(--black);
+
+}
+
+
+/* =====================================================
+   BUDGET / TIMELINE
+===================================================== */
+
+.budget-timeline-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+
+}
+
+
+.small-title {
+
+    display: block;
+
+    margin-bottom: 15px;
+
+}
+
+
+.choice-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+}
+
+
+.choice {
+
+    position: relative;
+
+    cursor: pointer;
+
+}
+
+
+.choice input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+.choice span {
+
+    display: block;
+
+    border: 1px solid var(--border);
+
+    padding: 8px 12px;
+
+    color: #8c949d;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 15px;
+
+    transition: .2s ease;
+
+}
+
+
+.choice:hover span {
+
+    border-color: #aaa;
+
+}
+
+
+.choice input:checked + span {
+
+    background: var(--black);
+
+    color: white;
+
+    border-color: var(--black);
+
+}
+
+
+/* =====================================================
+   PROJECT GOALS
+===================================================== */
+
+.project-goals {
+
+    margin-top: 5px;
+
+}
+
+
+.large-field {
+
+    margin-bottom: 32px;
+
+}
+
+
+.large-field label {
+
+    display: block;
+
+}
+
+
+.large-field textarea {
+
+    display: block;
+
+    width: 100%;
+
+    min-height: 85px;
+
+    resize: vertical;
+
+    outline: none;
+
+    border: none;
+
+    border-bottom: 1px solid var(--border);
+
+    background: transparent;
+
+    padding: 0 0 12px;
+
+    color: var(--black);
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+}
+
+
+.large-field textarea::placeholder {
+
+    color: #c2c5c7;
+
+}
+
+
+.large-field textarea:focus {
+
+    border-bottom-color: var(--red);
+
+}
+
+
+/* =====================================================
+   SUBMIT
+===================================================== */
+
+.submit-button {
+
+    border: none;
+
+    background: transparent;
+
+    padding: 0;
+
+    color: var(--red);
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+
+}
+
+
+.submit-button span {
+
+    margin-left: 5px;
+
+}
+
+
+.submit-button:hover {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    border-top: 1px solid var(--border);
+
+    padding: 45px 0 25px;
+
+}
+
+
+.footer .container {
+
+    width: min(750px, calc(100% - 50px));
+
+}
+
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 55px;
+
+}
+
+
+.footer-logo {
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    letter-spacing: -.7px;
+
+}
+
+
+.footer-logo span {
+
+    color: var(--red);
+
+}
+
+
+.footer-brand p {
+
+    max-width: 250px;
+
+    margin-top: 12px;
+
+    color: #90969c;
+
+    font-size: 8px;
+
+    line-height: 1.7;
+
+}
+
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+}
+
+
+.footer-title {
+
+    color: #9199a2;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+
+    letter-spacing: 1.8px;
+
+    margin-bottom: 14px;
+
+}
+
+
+.footer-column a {
+
+    color: #606870;
+
+    font-size: 15px;
+
+    margin-bottom: 7px;
+
+    transition: .2s;
+
+}
+
+
+.footer-column a:hover {
+
+    color: var(--red);
+
+}
+
+
+.footer-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-top: 1px solid var(--border);
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    color: #9ba1a6;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 6px;
+
+    letter-spacing: .5px;
+
+}
+
+
+.footer-mark {
+
+    display: block;
+
+    width: 20px;
+
+    height: 1px;
+
+    background: var(--red);
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .header-inner,
+    .brief-intro .container,
+    .footer .container {
+
+        width: min(680px, calc(100% - 50px));
+
+    }
+
+
+    .brief-intro h1 {
+
+        font-size: 42px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .container {
+
+        width: calc(100% - 40px);
+
+    }
+
+
+    /* HEADER */
+
+    .header {
+
+        height: 60px;
+
+    }
+
+
+    .header-inner {
+
+        width: calc(100% - 40px);
+
+    }
+
+
+    .logo {
+
+        font-size: 14px;
+
+    }
+
+
+    .navigation {
+
+        display: none;
+
+    }
+
+
+    /* INTRO */
+
+    .brief-intro {
+
+        padding-top: 35px;
+
+    }
+
+
+    .brief-intro .container {
+
+        width: calc(100% - 40px);
+
+    }
+
+
+    .eyebrow {
+
+        font-size: 7px;
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .brief-intro h1 {
+
+        font-size: 37px;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .intro-text {
+
+        font-size: 10px;
+
+        line-height: 1.65;
+
+    }
+
+
+    /* FORM */
+
+    .brief-form-section {
+
+        padding-top: 30px;
+
+        padding-bottom: 60px;
+
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 23px;
+
+    }
+
+
+    .form-section {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .form-section-title {
+
+        margin-bottom: 25px;
+
+        font-size: 12px;
+
+    }
+
+
+    .field label,
+    .large-field label,
+    .small-title {
+
+        font-size: 12px;
+
+    }
+
+
+    .field input {
+
+        font-size: 12px;
+
+    }
+
+
+    /* SERVICES */
+
+    .options-grid {
+
+        gap: 5px;
+
+    }
+
+
+    .option span {
+
+        padding: 7px 9px;
+
+        font-size: 12px;
+
+    }
+
+
+    /* BUDGET */
+
+    .budget-timeline-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+    }
+
+
+    .choice span {
+
+        padding: 7px 9px;
+
+        font-size: 12px;
+
+    }
+
+
+    /* TEXTAREAS */
+
+    .large-field textarea {
+
+        font-size: 15px;
+
+        min-height: 75px;
+
+    }
+
+
+    /* SUBMIT */
+
+    .submit-button {
+
+        font-size: 17px;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+
+        padding-top: 40px;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .footer-brand {
+
+        grid-column: 1 / -1;
+
+    }
+
+
+    .footer-bottom {
+
+        font-size: 6px;
+
+    }
+
+}

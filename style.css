@@ -1,0 +1,1758 @@
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --cream: #f3f0e8;
+
+    --cream-dark: #ebe7de;
+
+    --black: #171717;
+
+    --black-light: #202020;
+
+    --red: #df002b;
+
+    --blue-gray: #64748b;
+
+    --border: #ded9cf;
+
+    --white: #ffffff;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: var(--cream);
+
+    color: var(--black);
+
+    font-family: "Inter", sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+img {
+
+    display: block;
+
+    width: 100%;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+button,
+input,
+textarea {
+
+    font-family: inherit;
+
+}
+
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+.container {
+
+    width: min(1180px, calc(100% - 92px));
+
+    margin: auto;
+
+}
+
+
+.section-light {
+
+    background: var(--cream);
+
+}
+
+
+section {
+
+    position: relative;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    height: 90px;
+
+    padding: 0 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+}
+
+
+.logo span {
+
+    color: var(--red);
+
+}
+
+
+.navigation {
+
+    display: flex;
+
+    gap: 32px;
+
+}
+
+
+.navigation a {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    color: var(--blue-gray);
+
+    transition: .3s;
+
+}
+
+
+.navigation a:hover {
+
+    color: var(--red);
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height: 650px;
+
+    padding: 55px 0 100px;
+
+}
+
+
+.hero-label {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: var(--blue-gray);
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero-title-wrapper {
+
+    position: relative;
+
+}
+
+
+.hero-title {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    line-height: .88;
+
+    letter-spacing: -5px;
+
+    font-weight: 800;
+
+}
+
+
+.hero-title span {
+
+    color: var(--red);
+
+}
+
+
+.hero-background-word {
+
+    position: absolute;
+
+    z-index: 1;
+
+    left: 42%;
+
+    top: 70px;
+
+    font-size: clamp(100px, 15vw, 220px);
+
+    font-weight: 800;
+
+    letter-spacing: -12px;
+
+    color: rgba(30, 30, 30, .035);
+
+}
+
+
+.hero-bottom {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 50px;
+
+}
+
+
+.hero-text {
+
+    width: 460px;
+
+}
+
+
+.hero-text p {
+
+    color: var(--blue-gray);
+
+    font-size: 15px;
+
+    line-height: 1.65;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 14px;
+
+}
+
+
+.button {
+
+    min-height: 44px;
+
+    padding: 0 25px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    transition: .3s;
+
+}
+
+
+.button-red {
+
+    color: white;
+
+    background: var(--red);
+
+    border: 1px solid var(--red);
+
+}
+
+
+.button-red:hover {
+
+    background: var(--black);
+
+    border-color: var(--black);
+
+}
+
+
+.button-outline {
+
+    border: 1px solid var(--black);
+
+}
+
+
+.button-outline:hover {
+
+    color: white;
+
+    background: var(--black);
+
+}
+
+
+.scroll-indicator {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 30px;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    color: var(--blue-gray);
+
+}
+
+
+.scroll-indicator span {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.scroll-indicator div {
+
+    font-size: 18px;
+
+    margin-top: 5px;
+
+}
+
+
+/* =====================================================
+   GENERAL SECTION STRUCTURE
+===================================================== */
+
+.section-grid {
+
+    display: grid;
+
+    grid-template-columns: 130px 1fr;
+
+    gap: 45px;
+
+}
+
+
+.section-label {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding-top: 5px;
+
+    color: var(--red);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-label span:first-child {
+
+    font-size: 7px;
+
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about {
+
+    padding: 100px 0;
+
+}
+
+
+.about-content {
+
+    max-width: 990px;
+
+}
+
+
+.about-content h2 {
+
+    font-size: 32px;
+
+    line-height: 1;
+
+    letter-spacing: -1.8px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.about-content p {
+
+    max-width: 990px;
+
+    color: #737b86;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+}
+
+
+.about-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+
+    margin-top: 35px;
+
+}
+
+
+.about-tags span {
+
+    padding: 12px 18px;
+
+    border-right: 1px solid var(--border);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    color: var(--blue-gray);
+
+}
+
+
+/* =====================================================
+   WORK
+===================================================== */
+
+.work {
+
+    padding: 100px 0;
+
+}
+
+
+.work-content h2 {
+
+    font-size: 32px;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.filter {
+
+    display: flex;
+
+    gap: 5px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.filter button {
+
+    border: 1px solid var(--border);
+
+    background: transparent;
+
+    padding: 6px 12px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+}
+
+
+.filter button.active {
+
+    background: var(--black);
+
+    color: white;
+
+    border-color: var(--black);
+
+}
+
+
+/* =====================================================
+   PROJECT GRID
+===================================================== */
+  .projects {
+    
+    grid-template-columns: 1fr;
+}
+
+
+.project-image {
+
+    overflow: hidden;
+
+    background: #ddd;
+
+    margin-bottom: 10px;
+
+}
+
+
+.project-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .5s ease;
+
+}
+
+
+.project:hover .project-image img {
+
+    transform: scale(1.04);
+
+}
+
+
+.project h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 6px;
+
+    margin-top: 20px;
+
+}
+
+
+.project p {
+
+    color: #7a7f85;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    max-width: 990px;
+
+}
+
+
+.project-type {
+
+    display: block;
+
+    margin-top: 2px;
+
+    margin-bottom: 10px;
+
+    font-family: "DM Mono", monospace;
+
+    color: #9a9a9a;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services {
+
+    background: var(--black);
+
+    color: white;
+
+    padding: 100px 0;
+
+}
+
+
+.dark-label {
+
+    color: var(--red);
+
+}
+
+
+.services-content h2 {
+
+    font-size: 34px;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.services-intro {
+
+    color: #888;
+
+    font-size: 18px;
+
+    max-width: 700px;
+
+    line-height: 1.6;
+
+    margin-bottom: 40px;
+
+}
+
+
+/* =====================================================
+   SERVICES GRID
+===================================================== */
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+
+.service {
+
+    min-height: 150px;
+
+    position: relative;
+
+    padding: 25px 25px 25px 0;
+
+    border-top: 1px solid #303030;
+
+}
+
+
+.service:nth-child(even) {
+
+    padding-left: 25px;
+
+    border-left: 1px solid #303030;
+
+}
+
+
+.service-number {
+
+    position: absolute;
+
+    top: 22px;
+
+    right: 20px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 15px;
+
+    color: #555;
+
+}
+
+
+.service-icon {
+
+    color: var(--red);
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.service h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.service p {
+
+    color: #777;
+
+    max-width: 360px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+
+.service-button {
+
+    margin-top: 35px;
+
+}
+
+
+/* =====================================================
+   TESTIMONIALS
+===================================================== */
+
+.testimonials {
+
+    padding: 100px 0;
+
+}
+
+
+.testimonials-content h2 {
+
+    font-size: 32px;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.testimonial-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.testimonial {
+
+    border: 1px solid var(--border);
+
+    padding: 20px;
+
+    min-height: 190px;
+
+}
+
+
+.quote {
+
+    color: var(--red);
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+}
+
+
+.testimonial p {
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #686d73;
+
+    margin: 15px 0 25px;
+
+}
+
+
+.testimonial-author {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.testimonial-author strong {
+
+    font-size: 12px;
+
+}
+
+
+.testimonial-author span {
+
+    color: #999;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10   px;
+
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+
+    background: var(--black);
+
+    color: white;
+
+    padding: 100px 0;
+
+}
+
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+}
+
+
+.contact-intro h2 {
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    line-height: .9;
+
+    letter-spacing: -4px;
+
+    margin: 35px 0 25px;
+
+}
+
+
+.contact-intro > p {
+
+    max-width: 350px;
+
+    color: #777;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+
+.contact-details {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.contact-details span {
+
+    margin-top: 15px;
+
+    font-family: "DM Mono", monospace;
+
+    color: var(--red);
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.contact-details a {
+
+    font-size: 20px;
+
+    color: #aaa;
+
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-label {
+
+    display: block;
+
+    color: #555;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    border-bottom: 1px solid #333;
+
+    margin-bottom: 20px;
+
+}
+
+
+.form-group label {
+
+    color: #666;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    padding: 5px 0 12px;
+
+    font-size: 11px;
+
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #555;
+
+}
+
+
+.form-group textarea {
+
+    min-height: 80px;
+
+    resize: vertical;
+
+}
+
+
+.submit-button {
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--red);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 20px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    margin-top: 15px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    background: var(--cream);
+
+    padding: 65px 0 25px;
+
+}
+
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+
+}
+
+
+.footer-grid p {
+
+    max-width: 300px;
+
+    color: #888;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-top: 15px;
+
+}
+
+
+.footer-grid > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+}
+
+
+.footer-heading {
+
+    color: #999;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.footer-grid a:not(.logo) {
+
+    font-size: 15px;
+
+    color: #666;
+
+    margin-bottom: 8px;
+
+}
+
+
+.footer-bottom {
+
+    border-top: 1px solid var(--border);
+
+    margin-top: 50px;
+
+    padding-top: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #999;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .container {
+
+        width: min(100% - 60px, 700px);
+
+    }
+
+
+    .navigation {
+
+        gap: 15px;
+
+    }
+
+
+    .hero-title {
+
+        font-size: 65px;
+
+    }
+
+
+    .hero-text {
+
+        width: 360px;
+
+    }
+
+
+    .section-grid {
+
+        grid-template-columns: 90px 1fr;
+
+        gap: 25px;
+
+    }
+
+
+    .contact-grid {
+
+        gap: 50px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .container {
+
+        width: calc(100% - 92px);
+
+    }
+
+
+    /* HEADER */
+
+    .header {
+
+        height: 60px;
+
+        padding: 0 46px;
+
+    }
+
+
+    .logo {
+
+        font-size: 12px;
+
+    }
+
+
+    .navigation {
+
+        display: none;
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 590px;
+
+        padding-top: 35px;
+
+    }
+
+
+    .hero-label {
+
+        font-size: 6px;
+
+        letter-spacing: 1.2px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .hero-title {
+
+        font-size: 38px;
+
+        letter-spacing: -2px;
+
+        line-height: .91;
+
+    }
+
+
+    .hero-background-word {
+
+        font-size: 85px;
+
+        left: 25%;
+
+        top: 60px;
+
+        letter-spacing: -7px;
+
+    }
+
+
+    .hero-bottom {
+
+        justify-content: flex-end;
+
+        margin-top: 55px;
+
+    }
+
+
+    .hero-text {
+
+        width: 190px;
+
+    }
+
+
+    .hero-text p {
+
+        font-size: 7px;
+
+        line-height: 1.6;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .hero-buttons {
+
+        gap: 6px;
+
+    }
+
+
+    .button {
+
+        min-height: 28px;
+
+        padding: 0 12px;
+
+        font-size: 5px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .scroll-indicator {
+
+        display: none;
+
+    }
+
+
+    /* SECTIONS */
+
+    .section-grid {
+
+        display: grid;
+
+        grid-template-columns: 55px 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    .section-label {
+
+        font-size: 6px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    /* ABOUT */
+
+    .about {
+
+        padding: 65px 0;
+
+    }
+
+
+    .about-content h2 {
+
+        font-size: 20px;
+
+        letter-spacing: -1px;
+
+    }
+
+
+    .about-content p {
+
+        font-size: 7px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .about-tags span {
+
+        font-size: 5px;
+
+        padding: 7px 8px;
+
+    }
+
+
+    /* WORK */
+
+    .work {
+
+        padding: 65px 0;
+
+    }
+
+
+    .work-content h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .filter {
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .filter button {
+
+        font-size: 5px;
+
+        padding: 5px 7px;
+
+    }
+
+    .projects {
+    grid-template-columns: 1fr;
+}
+
+    .projects {
+
+        gap: 25px 8px;
+
+    }
+
+
+    .project-image {
+
+        margin-bottom: 7px;
+
+    }
+
+
+    .project h3 {
+
+        font-size: 6px;
+
+        margin-bottom: 4px;
+
+    }
+
+
+    .project p {
+
+        font-size: 5px;
+
+        line-height: 1.5;
+
+    }
+
+
+    .project-type {
+
+        font-size: 4px;
+
+        margin-top: 5px;
+
+    }
+
+
+    /* SERVICES */
+
+    .services {
+
+        padding: 65px 0;
+
+    }
+
+
+    .services-content h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .services-intro {
+
+        font-size: 6px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .service {
+
+        min-height: 125px;
+
+        padding: 18px 12px 18px 0;
+
+    }
+
+
+    .service:nth-child(even) {
+
+        padding-left: 12px;
+
+    }
+
+
+    .service-icon {
+
+        font-size: 10px;
+
+        margin-bottom: 8px;
+
+    }
+
+
+    .service h3 {
+
+        font-size: 6px;
+
+    }
+
+
+    .service p {
+
+        font-size: 5px;
+
+        line-height: 1.6;
+
+    }
+
+
+    .service-number {
+
+        font-size: 5px;
+
+        top: 15px;
+
+        right: 8px;
+
+    }
+
+
+    .service-button {
+
+        margin-top: 20px;
+
+    }
+
+
+    /* TESTIMONIALS */
+
+    .testimonials {
+
+        padding: 65px 0;
+
+    }
+
+
+    .testimonials-content h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .testimonial-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+    }
+
+
+    .testimonial {
+
+        min-height: auto;
+
+        padding: 14px;
+
+    }
+
+
+    .quote {
+
+        font-size: 15px;
+
+    }
+
+
+    .testimonial p {
+
+        font-size: 6px;
+
+        margin: 8px 0 15px;
+
+    }
+
+
+    .testimonial-author strong {
+
+        font-size: 6px;
+
+    }
+
+
+    .testimonial-author span {
+
+        font-size: 5px;
+
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+
+        padding: 65px 0;
+
+    }
+
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+
+    }
+
+
+    .contact-intro h2 {
+
+        font-size: 42px;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .contact-intro > p {
+
+        font-size: 7px;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+
+        padding: 45px 0 20px;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px;
+
+    }
+
+
+    .footer-grid > div:first-child {
+
+        grid-column: 1 / -1;
+
+    }
+
+
+    .footer-grid p {
+
+        font-size: 6px;
+
+    }
+
+
+    .footer-heading {
+
+        font-size: 5px;
+
+    }
+
+
+    .footer-grid a:not(.logo) {
+
+        font-size: 6px;
+
+    }
+
+
+    .footer-bottom {
+
+        margin-top: 30px;
+
+        font-size: 4px;
+
+    }
+
+}

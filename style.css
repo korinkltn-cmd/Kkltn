@@ -1333,9 +1333,9 @@ section {
 
     .hero-bottom {
 
-        justify-content: flex-end;
+        justify-content: flex-start;
 
-        margin-top: 55px;
+        margin-top: 50px;
 
     }
 
@@ -1349,7 +1349,7 @@ section {
 
     .hero-text p {
 
-        font-size: 7px;
+        font-size: 12px;
 
         line-height: 1.6;
 
@@ -1367,11 +1367,11 @@ section {
 
     .button {
 
-        min-height: 28px;
+        min-height: 50px;
 
         padding: 0 12px;
 
-        font-size: 5px;
+        font-size: 12px;
 
         letter-spacing: 1px;
 
@@ -1400,7 +1400,7 @@ section {
 
     .section-label {
 
-        font-size: 6px;
+        font-size: 12px;
 
         letter-spacing: 1px;
 
@@ -1411,7 +1411,7 @@ section {
 
     .about {
 
-        padding: 65px 0;
+        padding: 2px 0;
 
     }
 
@@ -1427,7 +1427,7 @@ section {
 
     .about-content p {
 
-        font-size: 7px;
+        font-size: 12px;
 
         line-height: 1.8;
 
@@ -1436,7 +1436,7 @@ section {
 
     .about-tags span {
 
-        font-size: 5px;
+        font-size: 12px;
 
         padding: 7px 8px;
 
@@ -1494,7 +1494,7 @@ section {
 
     .project h3 {
 
-        font-size: 6px;
+        font-size: 12px;
 
         margin-bottom: 4px;
 
@@ -1503,7 +1503,7 @@ section {
 
     .project p {
 
-        font-size: 5px;
+        font-size: 12px;
 
         line-height: 1.5;
 
@@ -1512,7 +1512,7 @@ section {
 
     .project-type {
 
-        font-size: 4px;
+        font-size: 10px;
 
         margin-top: 5px;
 
@@ -1537,7 +1537,7 @@ section {
 
     .services-intro {
 
-        font-size: 6px;
+        font-size: 12px;
 
         margin-bottom: 25px;
 
@@ -1562,7 +1562,7 @@ section {
 
     .service-icon {
 
-        font-size: 10px;
+        font-size: 20px;
 
         margin-bottom: 8px;
 
@@ -1571,14 +1571,14 @@ section {
 
     .service h3 {
 
-        font-size: 6px;
+        font-size: 12px;
 
     }
 
 
     .service p {
 
-        font-size: 5px;
+        font-size: 12px;
 
         line-height: 1.6;
 
@@ -1646,7 +1646,7 @@ section {
 
     .testimonial p {
 
-        font-size: 6px;
+        font-size: 12px;
 
         margin: 8px 0 15px;
 
@@ -1655,14 +1655,14 @@ section {
 
     .testimonial-author strong {
 
-        font-size: 6px;
+        font-size: 12px;
 
     }
 
 
     .testimonial-author span {
 
-        font-size: 5px;
+        font-size: 12px;
 
     }
 
@@ -1728,21 +1728,21 @@ section {
 
     .footer-grid p {
 
-        font-size: 6px;
+        font-size: 12px;
 
     }
 
 
     .footer-heading {
 
-        font-size: 5px;
+        font-size: 10px;
 
     }
 
 
     .footer-grid a:not(.logo) {
 
-        font-size: 6px;
+        font-size: 12px;
 
     }
 
@@ -1751,7 +1751,7 @@ section {
 
         margin-top: 30px;
 
-        font-size: 4px;
+        font-size: 10px;
 
     }
 
